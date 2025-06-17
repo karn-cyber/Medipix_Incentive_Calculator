@@ -1,0 +1,112 @@
+/* App.css */
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .app-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .logo {
+    width: 120px;
+    height: auto;
+  }
+  
+  h1 {
+    font-size: 1.8rem;
+    margin-top: 10px;
+  }
+  
+  .section-heading {
+    font-size: 1.4rem;
+    margin: 30px 0 10px;
+    border-bottom: 2px solid #0077cc;
+    padding-bottom: 4px;
+  }
+  
+  .form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-bottom: 15px;
+  }
+  
+  .form-item {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    font-weight: 500;
+    margin-bottom: 6px;
+    font-size: 0.95rem;
+  }
+  
+  input {
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+  
+  .calculate-btn {
+    width: 100%;
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 1.1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .calculate-btn:hover {
+    background-color: #005fa3;
+  }
+  
+  .result-section {
+    margin-top: 20px;
+    background-color: #e0f7fa;
+    padding: 16px;
+    border-left: 4px solid #0077cc;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 6px;
+  }
+  
+  /* Mobile-specific adjustments */
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 1.5rem;
+    }
+  
+    .section-heading {
+      font-size: 1.2rem;
+    }
+  
+    .calculate-btn {
+      font-size: 1rem;
+      padding: 10px;
+    }
+  
+    .form-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    input {
+      font-size: 0.95rem;
+    }
+  }
+  
