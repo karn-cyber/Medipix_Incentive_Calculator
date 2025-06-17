@@ -6,24 +6,25 @@ body {
   }
   
   .container {
-    max-width: 960px;
+    max-width: 1000px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 1.5rem;
   }
   
   .app-header {
-    text-align: center;
+    text-align: left;
     margin-bottom: 2rem;
   }
   
   .logo {
-    width: 120px;
-    margin-bottom: 1rem;
+    width: 100px;
+    
   }
   
   h1 {
     color: #0077cc;
     font-size: 2rem;
+    margin: 0;
   }
   
   main {
@@ -60,6 +61,16 @@ body {
     margin-bottom: 0.5rem;
   }
   
+  input:invalid {
+    border-color: red;
+  }
+  
+  .form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+  }
+  
   .calculate-btn {
     padding: 1rem 2rem;
     font-size: 1.1rem;
@@ -70,6 +81,8 @@ body {
     cursor: pointer;
     align-self: center;
     transition: background 0.3s ease;
+    width: fit-content;
+    margin: 0 auto;
   }
   
   .calculate-btn:hover {
@@ -82,5 +95,20 @@ body {
     margin-top: 1rem;
     color: #004b87;
     font-weight: bold;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 1.5rem;
+    }
+  
+    .calculator-section {
+      padding: 1rem;
+    }
+  
+    .calculate-btn {
+      width: 100%;
+    }
   }
   

@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import MedipixLogo from "./assets/Medipix_logo.jpg"; // Adjust path if needed
+import MedipixLogo from "./assets/Medipix_logo.jpg"; // Ensure correct path
 
 function App() {
   return (
@@ -13,49 +13,113 @@ function App() {
       <main>
         <section className="calculator-section">
           <h2>Secondary Sales</h2>
-          <input type="number" placeholder="Enter Secondary Sales (₹)" />
+          <input
+            type="number"
+            min="0"
+            placeholder="Enter Secondary Sales (₹)"
+            onInput={(e) => (e.target.value = Math.max(0, e.target.value))}
+          />
         </section>
 
         <section className="calculator-section">
           <h2>Brand Sales</h2>
-          <label>SuperJoint GM</label>
-          <input type="number" placeholder="Strips sold" />
-
-          <label>SuperJoint Plus</label>
-          <input type="number" placeholder="Strips sold" />
-
-          <label>Pixicoxib</label>
-          <input type="number" placeholder="Strips sold" />
-
-          <label>Cytovita-Q10</label>
-          <input type="number" placeholder="Strips sold" />
+          <div className="form-grid">
+            <div>
+              <label>SuperJoint GM</label>
+              <input
+                type="number"
+                min="0"
+                placeholder="Strips sold"
+                onInput={(e) => (e.target.value = Math.max(0, e.target.value))}
+              />
+            </div>
+            <div>
+              <label>SuperJoint Plus</label>
+              <input
+                type="number"
+                min="0"
+                placeholder="Strips sold"
+                onInput={(e) => (e.target.value = Math.max(0, e.target.value))}
+              />
+            </div>
+            <div>
+              <label>Pixicoxib</label>
+              <input
+                type="number"
+                min="0"
+                placeholder="Strips sold"
+                onInput={(e) => (e.target.value = Math.max(0, e.target.value))}
+              />
+            </div>
+            <div>
+              <label>Cytovita-Q10</label>
+              <input
+                type="number"
+                min="0"
+                placeholder="Strips sold"
+                onInput={(e) => (e.target.value = Math.max(0, e.target.value))}
+              />
+            </div>
+          </div>
         </section>
 
         <section className="calculator-section">
           <h2>POB Incentives</h2>
           <label>Pixiproti Powder</label>
-          <input type="number" placeholder="Units sold" />
+          <input
+            type="number"
+            min="0"
+            placeholder="Units sold"
+            onInput={(e) => (e.target.value = Math.max(0, e.target.value))}
+          />
         </section>
 
         <section className="calculator-section">
           <h2>Field Performance</h2>
-          <label>Doctor Calls</label>
-          <input type="number" placeholder="Calls made" />
-
-          <label>Super Core Coverage (%)</label>
-          <input type="number" placeholder="%" />
-
-          <label>DVL Coverage (%)</label>
-          <input type="number" placeholder="%" />
-
-          <label>Days in Field</label>
-          <input type="number" placeholder="Days worked" />
+          <div className="form-grid">
+            <div>
+              <label>Doctor Calls</label>
+              <input
+                type="number"
+                min="0"
+                placeholder="Calls made"
+                onInput={(e) => (e.target.value = Math.max(0, e.target.value))}
+              />
+            </div>
+            <div>
+              <label>Super Core Coverage (%)</label>
+              <input
+                type="number"
+                min="0"
+                placeholder="Enter %"
+                onInput={(e) => (e.target.value = Math.max(0, e.target.value))}
+              />
+            </div>
+            <div>
+              <label>DVL Coverage (%)</label>
+              <input
+                type="number"
+                min="0"
+                placeholder="Enter %"
+                onInput={(e) => (e.target.value = Math.max(0, e.target.value))}
+              />
+            </div>
+            <div>
+              <label>Days in Field</label>
+              <input
+                type="number"
+                min="0"
+                placeholder="Days worked"
+                onInput={(e) => (e.target.value = Math.max(0, e.target.value))}
+              />
+            </div>
+          </div>
         </section>
 
         <button className="calculate-btn">Calculate Incentive</button>
 
         <div className="result-section">
-          <h3>Estimated Incentive: ₹0.00</h3> {/* Placeholder for dynamic result */}
+          <h3>Estimated Incentive: ₹0.00</h3>
         </div>
       </main>
     </div>
