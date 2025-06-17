@@ -8,23 +8,25 @@ body {
   .container {
     max-width: 1000px;
     margin: 0 auto;
-    padding: 1.5rem;
+    padding: 2rem 1.5rem;
   }
   
   .app-header {
-    text-align: left;
+    text-align: center;
     margin-bottom: 2rem;
   }
   
   .logo {
-    width: 100px;
-    
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 0.2rem;
   }
   
   h1 {
     color: #0077cc;
     font-size: 2rem;
-    margin: 0;
+    font-weight: 700;
   }
   
   main {
@@ -35,9 +37,9 @@ body {
   
   .calculator-section {
     background-color: #ffffff;
-    padding: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
   }
   
   .calculator-section h2 {
@@ -49,16 +51,25 @@ body {
   .calculator-section label {
     display: block;
     margin: 1rem 0 0.25rem;
-    font-weight: 500;
+    font-weight: 600;
+    color: #333;
   }
   
   .calculator-section input {
     width: 100%;
     padding: 0.7rem;
     font-size: 1rem;
-    border: 1px solid #d0dbe5;
-    border-radius: 5px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
     margin-bottom: 0.5rem;
+    background-color: #f9fafb;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  
+  .calculator-section input:focus {
+    border-color: #0077cc;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 119, 204, 0.2);
   }
   
   input:invalid {
@@ -68,7 +79,7 @@ body {
   .form-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1rem;
+    gap: 1.25rem;
   }
   
   .calculate-btn {
@@ -77,12 +88,12 @@ body {
     background-color: #0077cc;
     color: white;
     border: none;
-    border-radius: 6px;
+    border-radius: 10px;
     cursor: pointer;
     align-self: center;
     transition: background 0.3s ease;
-    width: fit-content;
-    margin: 0 auto;
+    width: 100%;
+    margin-top: 1.5rem;
   }
   
   .calculate-btn:hover {
@@ -91,24 +102,36 @@ body {
   
   .result-section {
     text-align: center;
-    font-size: 1.25rem;
-    margin-top: 1rem;
-    color: #004b87;
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    color: #018e30;
     font-weight: bold;
   }
   
-  /* Responsive Design */
+  /* Responsive */
   @media (max-width: 768px) {
     h1 {
-      font-size: 1.5rem;
+      font-size: 1.6rem;
     }
   
     .calculator-section {
-      padding: 1rem;
+      padding: 1.5rem;
     }
   
     .calculate-btn {
-      width: 100%;
+      font-size: 1rem;
     }
+  
+    .result-section {
+      font-size: 1.25rem;
+    }
+  }
+  .section-heading {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 2rem 0 1rem;
+    color: #1e3a8a;
+    border-left: 5px solid #0077cc;
+    padding-left: 12px;
   }
   
